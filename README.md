@@ -42,10 +42,11 @@ The folder fakeservice contains a small application that represent s your backen
     npm install
 
 ##Summary
-###fakeservice
+
+### fakeservice
 
 - Added new property ‘timestamp’ under the fakeservice\comments\resources\comments\config.json
-    
+####    
 	"timestamp": {
 	"name": "timestamp",
 	"type": "number",
@@ -56,7 +57,7 @@ The folder fakeservice contains a small application that represent s your backen
 }
 
 - Storing ‘timestamp’ in DB against each post request using the javascript in fakeservice\comments\resources\comments\post.js directly, Instead of sending it in post request from UI.
-    
+    ###
 	this.timestamp = new Date().getTime();
 
 ###Using moment.js library for time difference for all 3 apps
