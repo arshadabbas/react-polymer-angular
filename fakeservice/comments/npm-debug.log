@@ -1,0 +1,113 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'dpd',
+1 verbose cli   'app.dpd' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of C:\tomcat\webapps\test\sabre\fakeservice\package.json
+5 warn package.json fakeservice@1.0.0 No repository field.
+6 verbose installManyTop reading scoped package data from C:\tomcat\webapps\test\sabre\fakeservice\node_modules\deployd\package.json
+7 verbose installManyTop reading scoped package data from C:\tomcat\webapps\test\sabre\fakeservice\node_modules\dpd\package.json
+8 verbose readDependencies loading dependencies from C:\tomcat\webapps\test\sabre\fakeservice\package.json
+9 verbose install dpd is installed as 0.2.15-beta
+10 silly cache add args [ 'dpd', null ]
+11 verbose cache add spec dpd
+12 silly cache add args [ 'app.dpd', null ]
+13 verbose cache add spec app.dpd
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'dpd',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'dpd',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: 'latest',
+14 silly cache add   type: 'tag' }
+15 silly addNamed dpd@latest
+16 verbose addNamed "latest" is being treated as a dist-tag for dpd
+17 info addNameTag [ 'dpd', 'latest' ]
+18 silly mapToRegistry name dpd
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry data Result {
+21 silly mapToRegistry   raw: 'dpd',
+21 silly mapToRegistry   scope: null,
+21 silly mapToRegistry   name: 'dpd',
+21 silly mapToRegistry   rawSpec: '',
+21 silly mapToRegistry   spec: 'latest',
+21 silly mapToRegistry   type: 'tag' }
+22 silly mapToRegistry uri https://registry.npmjs.org/dpd
+23 verbose addNameTag registry:https://registry.npmjs.org/dpd not in flight; fetching
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'app.dpd',
+24 silly cache add   scope: null,
+24 silly cache add   name: null,
+24 silly cache add   rawSpec: 'app.dpd',
+24 silly cache add   spec: 'C:\\tomcat\\webapps\\test\\sabre\\fakeservice\\comments\\app.dpd',
+24 silly cache add   type: 'local' }
+25 silly addLocalTarball shasum (computed) bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f
+26 verbose addTmpTarball C:\tomcat\webapps\test\sabre\fakeservice\comments\app.dpd not in flight; adding
+27 verbose correctMkdir C:\Users\arshad\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+28 verbose request uri https://registry.npmjs.org/dpd
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 9:44:36 PM
+31 verbose request id 7e88dfbac8a1b6ae
+32 verbose etag "3TV1P3UUSEIFYLGPMGMJY8Q0C"
+33 http request GET https://registry.npmjs.org/dpd
+34 verbose addTmpTarball validating metadata from C:\tomcat\webapps\test\sabre\fakeservice\comments\app.dpd
+35 verbose tar unpack C:\tomcat\webapps\test\sabre\fakeservice\comments\app.dpd
+36 verbose tar unpacking to C:\Users\arshad\AppData\Local\Temp\npm-6112-bc223d9b\unpack-6b6a97fb08ab
+37 silly gentlyRm C:\Users\arshad\AppData\Local\Temp\npm-6112-bc223d9b\unpack-6b6a97fb08ab is being purged
+38 verbose gentlyRm don't care about contents; nuking C:\Users\arshad\AppData\Local\Temp\npm-6112-bc223d9b\unpack-6b6a97fb08ab
+39 silly gunzTarPerm modes [ '777', '666' ]
+40 error not a package C:\tomcat\webapps\test\sabre\fakeservice\comments\app.dpd
+41 error addLocal Could not install C:\tomcat\webapps\test\sabre\fakeservice\comments\app.dpd
+42 http 304 https://registry.npmjs.org/dpd
+43 verbose headers { date: 'Sun, 24 Apr 2016 02:44:39 GMT',
+43 verbose headers   via: '1.1 varnish',
+43 verbose headers   'cache-control': 'max-age=300',
+43 verbose headers   etag: '"3TV1P3UUSEIFYLGPMGMJY8Q0C"',
+43 verbose headers   age: '145',
+43 verbose headers   connection: 'keep-alive',
+43 verbose headers   'x-served-by': 'cache-ord1741-ORD',
+43 verbose headers   'x-cache': 'HIT',
+43 verbose headers   'x-cache-hits': '1',
+43 verbose headers   'x-timer': 'S1461465879.997416,VS0,VE0',
+43 verbose headers   vary: 'Accept-Encoding' }
+44 silly get cb [ 304,
+44 silly get   { date: 'Sun, 24 Apr 2016 02:44:39 GMT',
+44 silly get     via: '1.1 varnish',
+44 silly get     'cache-control': 'max-age=300',
+44 silly get     etag: '"3TV1P3UUSEIFYLGPMGMJY8Q0C"',
+44 silly get     age: '145',
+44 silly get     connection: 'keep-alive',
+44 silly get     'x-served-by': 'cache-ord1741-ORD',
+44 silly get     'x-cache': 'HIT',
+44 silly get     'x-cache-hits': '1',
+44 silly get     'x-timer': 'S1461465879.997416,VS0,VE0',
+44 silly get     vary: 'Accept-Encoding' } ]
+45 verbose etag https://registry.npmjs.org/dpd from cache
+46 verbose get saving dpd to C:\Users\arshad\AppData\Roaming\npm-cache\registry.npmjs.org\dpd\.cache.json
+47 verbose correctMkdir C:\Users\arshad\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+48 silly addNameTag next cb for dpd with tag latest
+49 silly addNamed dpd@0.2.15-beta
+50 verbose addNamed "0.2.15-beta" is a plain semver version for dpd
+51 silly cache afterAdd dpd@0.2.15-beta
+52 verbose afterAdd C:\Users\arshad\AppData\Roaming\npm-cache\dpd\0.2.15-beta\package\package.json not in flight; writing
+53 verbose correctMkdir C:\Users\arshad\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+54 verbose afterAdd C:\Users\arshad\AppData\Roaming\npm-cache\dpd\0.2.15-beta\package\package.json written
+55 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\arshad\AppData\Local\Temp\npm-6112-bc223d9b\unpack-6b6a97fb08ab\package.json'
+55 verbose stack     at Error (native)
+56 verbose cwd C:\tomcat\webapps\test\sabre\fakeservice\comments
+57 error Windows_NT 6.1.7600
+58 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "dpd" "app.dpd"
+59 error node v4.4.3
+60 error npm  v2.15.1
+61 error path C:\Users\arshad\AppData\Local\Temp\npm-6112-bc223d9b\unpack-6b6a97fb08ab\package.json
+62 error code ENOENT
+63 error errno -4058
+64 error syscall open
+65 error enoent ENOENT: no such file or directory, open 'C:\Users\arshad\AppData\Local\Temp\npm-6112-bc223d9b\unpack-6b6a97fb08ab\package.json'
+65 error enoent This is most likely not a problem with npm itself
+65 error enoent and is related to npm not being able to find a file.
+66 verbose exit [ -4058, true ]

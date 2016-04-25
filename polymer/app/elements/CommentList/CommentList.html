@@ -1,0 +1,56 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<dom-module id="comment-list">
+    <template>
+        <template is="dom-repeat" items="{{data}}" id="list"">
+            <comment-model author="{{item.author}}" msg="{{item.msg}}" timestamp="{{formatTime(item.timestamp)}}">
+            </comment-model>
+        </template>
+        <div hidden$="{{noCommentsHidden}}">No comments yet</div>
+    </template>
+</dom-module>
+
+<script>
+    Polymer({
+        is: "comment-list",
+        properties: {
+            data: {
+                type: Array,
+                value: function(){
+                    return [];
+                }
+            },
+            noCommentsHidden: {
+              type: Boolean,
+              value: true,
+              computed: '_computeNoCommentsHidden(data)'
+            }
+        },
+        _computeNoCommentsHidden: function(data){
+            if(typeof data === 'undefined') {
+              return false;
+            }
+            return data.length > 0;
+        },
+		formatTime: function(timestamp) {
+			if(timestamp !== undefined) {
+				var now = moment(new Date());
+				var sec = now.diff(timestamp, 'seconds');
+				var min = now.diff(timestamp, 'minutes');
+				var hr = now.diff(timestamp, 'hours', true);
+				var day = now.diff(timestamp, 'days', true);
+				var str;
+				if(sec<59) {
+					str = '1 minute ago';
+				} else if(sec>59 && min<59) {
+					str = min+' minute ago';
+				} else if(min>59 && hr<23.59) {
+					str = now.diff(timestamp, 'hours')+' hours ago';
+				} else if(hr>23.59) {
+					str = now.diff(timestamp, 'days')+' days ago';
+				}
+				return str;
+			}
+		}		
+    });
+</script>
