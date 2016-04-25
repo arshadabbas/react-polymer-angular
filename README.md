@@ -45,7 +45,8 @@ The folder fakeservice contains a small application that represent s your backen
 ###fakeservice
 
 - Added new property ‘timestamp’ under the fakeservice\comments\resources\comments\config.json
-    "timestamp": {
+    
+	"timestamp": {
 	"name": "timestamp",
 	"type": "number",
 	"typeLabel": "number",
@@ -55,13 +56,16 @@ The folder fakeservice contains a small application that represent s your backen
 }
 
 - Storing ‘timestamp’ in DB against each post request using the javascript in fakeservice\comments\resources\comments\post.js directly, Instead of sending it in post request from UI.
-    this.timestamp = new Date().getTime();
+    
+	this.timestamp = new Date().getTime();
 
 ###Using moment.js library for time difference for all 3 apps
 
 ###Angular
 - Created filter for formatting of posted time of comment where I have applied all the logic based on the requirement – angular/app/scripts/filter/ftTime.js
-    {{comment.timestamp | formatTime}}
+    
+	{{comment.timestamp | formatTime}}
+	
 - 
 
 Now choose the folder by framework's name and just follow the corresponding README file instructions located in each folder.
