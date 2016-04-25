@@ -6,17 +6,13 @@
 - NPM
 - Install mongoDb and add it to your PATH
 
-## Start
-Fork the following repo: https://github.com/sesteva/react-polymer-angular into your github account.
-When you are done pelase send us your repo link.
-
-## Your task
-You will notice the project contains the same app implemented in 3 different JS frameworks.
-Your goal is to implement the following Feature. You can choose to do it in one or multiple frameworks.
+## Task
+I have completed the task in all 3 JS frameworks (Angular, react and polymer).
+Note:  Major framework is Angular
 
 ### Feature – Comment-TimeLapse
-We are going to build component that displays how long ago was the comment posted.
-General Description: - “As a User,Given the list of comments includes at least 1 comment, When the list is displayed, Then I want to see how long ago has the comment been posted. Just like the one on Github next to the file name. 1 minute ago, 2 days ago, etc"
+We are going to build component that displays how long ago the comment was posted.
+General Description: - “As a User, Given the list of comments includes at least 1 comment, When the list is displayed, Then I want to see how long ago has the comment been posted. Just like the one on Github next to the file name. 1 minute ago, 2 days ago, etc"
 
 ### Acceptance criteria
 - “As a User, Given the comment was posted less than 59 seconds ago, When the comment is displayed in the list, Then I want to always see “1 minute ago”
@@ -41,12 +37,36 @@ The folder fakeservice contains a small application that represent s your backen
 #### Edit Data
     Open http://localhost:2403/dashboard/comments/data/
 
-### Before you made your changes
-Please make sure to push your branch to github and send us the link
-
 ### Install Dependencies
     cd fakeservice
     npm install
+
+##Summary
+###fakeservice
+
+- Added new property ‘timestamp’ under the fakeservice\comments\resources\comments\config.json
+#### 
+"timestamp": {
+	"name": "timestamp",
+	"type": "number",
+	"typeLabel": "number",
+	"required": false,
+	"id": "timestamp",
+	"order": 2
+}
+
+- Storing ‘timestamp’ in DB against each post request using the javascript in fakeservice\comments\resources\comments\post.js directly, Instead of sending it in post request from UI.
+####this.timestamp = new Date().getTime();
+
+###Using moment.js library for time difference for all 3 apps
+
+###Angular
+- Created filter for formatting of posted time of comment where I have applied all the logic based on the requirement – angular/app/scripts/filter/ftTime.js
+####{{comment.timestamp | formatTime}}
+- 
+
+Now choose the folder by framework's name and just follow the corresponding README file instructions located in each folder.
+
 
 ### Running App
 Now choose the folder by framework's name and just follow the corresponding README file instructions located in each folder.
